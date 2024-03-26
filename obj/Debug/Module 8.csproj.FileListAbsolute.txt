@@ -1,0 +1,11 @@
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\bin\Debug\Module 8.exe.config
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\bin\Debug\Module 8.exe
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\bin\Debug\Module 8.pdb
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module 8.csproj.AssemblyReference.cache
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module_8.frmImport.resources
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module_8.frmMenu.resources
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module_8.Properties.Resources.resources
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module 8.csproj.GenerateResource.cache
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module 8.csproj.CoreCompileInputs.cache
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module 8.exe
+C:\Users\Zachary\Documents\[College Classes]\Term 5 [Winter 2024]\Advanced .NET Programming - COMS-276\Module 8\obj\Debug\Module 8.pdb
