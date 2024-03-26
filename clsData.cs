@@ -7,9 +7,9 @@ using System.Data;
 using System.Data.OleDb;
 using System.IO;
 
-namespace P4_CSharp
+namespace Module_8
 {
-    class clsData
+    public class clsData
     {
 
         string _strConnectionString = clsGlobal.DatabaseConnectionString; // variable to link to connectionstring property
@@ -88,35 +88,32 @@ namespace P4_CSharp
             }
         }
 
-        public void CreateEquipment(string EquipmentName, DateTime PurchaseDate, string Notes)
+        public void BatchAddVideos(List<clsVideoDetail> VideosList)
         {
-            // create sql statement for new customer
-            SQL = "SELECT ID, EquipmentName, PurchaseDate, Notes FROM tblEquipment WHERE ID = 0";
-            // create connection to databae
-            OleDbConnection conn = new OleDbConnection(ConnectionString);
-            // open connection
-            conn.Open();
-            // create dataset 
-            DataSet ds = new DataSet();
-            // fill dataset with data adapter
+            SQL = "SELECT VideoID, VideoURL, TrendingDate, VideoTitle, Tags, Views, Likes, Dislikes, ThumbNail, VideoDescription FROM tblVideos WHERE ID = 0";
+            OleDbConnection connection = new OleDbConnection(ConnectionString);
+            connection.Open();
+            DataSet data = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter(SQL, ConnectionString);
-            adapter.Fill(ds);
-            // create data row
-            DataRow dr = ds.Tables[0].NewRow();
-            // update values in data row
-            dr["EquipmentName"] = EquipmentName;
-            dr["PurchaseDate"] = PurchaseDate;
-            dr["Notes"] = Notes;
-
-
-            // add data row to table
-            ds.Tables[0].Rows.Add(dr);
-            // create command builder
-            System.Data.OleDb.OleDbCommandBuilder cb = new System.Data.OleDb.OleDbCommandBuilder(adapter);
-            // update adapter
-            adapter.Update(ds.Tables[0]);
-            // close connection
-            conn.Close();
+            adapter.Fill(data);
+            for (int i = 0; i < VideosList.Count; i++)
+            {
+                DataRow row = data.Tables[0].NewRow();
+                row["VideoID"] = VideosList[i].VideoID;
+                row["VideoURL"] = VideosList[i].VideoURL;
+                row["TrendingDate"] = VideosList[i].VideoTrendingDate;
+                row["VideoTitle"] = VideosList[i].VideoTitle;
+                row["Tags"] = VideosList[i].VideoTags;
+                row["Views"] = VideosList[i].VideoViews;
+                row["Likes"] = VideosList[i].VideoLikes;
+                row["Dislikes"] = VideosList[i].VideoDislikes;
+                row["ThumbNail"] = VideosList[i].VideoThumbnail;
+                row["VideoDescription"] = VideosList[i].VideoDescription;
+                data.Tables[0].Rows.Add(row);
+            }
+            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
+            adapter.Update(data.Tables[0]);
+            connection.Close();
         }
 
         public void DeleteRecord(string _SQLStatement)

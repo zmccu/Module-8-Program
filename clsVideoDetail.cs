@@ -7,8 +7,19 @@ using System.Globalization;
 
 namespace Module_8
 {
-    class clsVideoDetail
+    public class clsVideoDetail
     {
+
+        public clsVideoDetail(string _VideoID, string _VideoTitle, string _VideoViews, string _VideoLikes, string _VideoDislikes, string _VideoThumbnail)
+        {
+            VideoID = _VideoID;
+            VideoURL = "https://www.youtube.com/watch?v=" + VideoID;
+            VideoTitle = _VideoTitle;
+            VideoViews = Convert.ToInt64(_VideoViews);
+            VideoLikes = Convert.ToInt64(_VideoLikes);
+            VideoDislikes = Convert.ToInt64(_VideoDislikes);
+            VideoThumbnail = _VideoThumbnail;
+        }
 
         public clsVideoDetail(string _VideoID, string _VideoTrendingDate, string _VideoTitle, string _VideoTags, string _VideoViews, string _VideoLikes, string _VideoDislikes, string _VideoThumbnail, string _VideoDescription)
         {
